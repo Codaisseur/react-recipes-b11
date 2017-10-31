@@ -1,19 +1,12 @@
-import React, { Component } from 'react'
-import Title from './components/Title'
+import React from 'react'
+import RecipesContainer from './recipes/RecipesContainer'
+import recipes from './fixtures/recipes'
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <Title text="All Recipes" />
-          <Title text="Some Recipes" />
-          <Title text="Many Recipes" />
-          <Title text="Medium Recipes" />
-        </header>
-        <p className="App-intro">
-          Hi!
-        </p>
+      <div>
+        <RecipesContainer recipes={recipes} />
       </div>
     )
   }

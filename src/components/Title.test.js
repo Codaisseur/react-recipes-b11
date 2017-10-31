@@ -8,7 +8,7 @@ import Title from './Title'
 chai.use(chaiEnzyme())
 
 describe('<Title />', () => {
-  const title = shallow(<Title text="Hello, World" />)
+  const title = shallow(<Title content="Hello, World" />)
 
   it('has a wrapping h1 tag', () => {
     expect(title).to.have.tagName('h1')
@@ -19,7 +19,7 @@ describe('<Title />', () => {
   })
 
   describe('with a different content prop', () => {
-    const title = shallow(<Title text="Something Completely Different!" />)
+    const title = shallow(<Title content="Something Completely Different!" />)
 
     it('renders a different title text', () => {
       expect(title).to.have.text('Something Completely Different!')
