@@ -6,7 +6,7 @@ import RecipeItem from './RecipeItem'
 import SeedButton from './SeedButton'
 import './RecipesContainer.css'
 
-class RecipesContainer extends PureComponent {
+export class RecipesContainer extends PureComponent {
   renderRecipe(recipe, index) {
     return (
       <RecipeItem key={index} {...recipe} />
