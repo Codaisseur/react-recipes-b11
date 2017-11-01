@@ -1,14 +1,12 @@
 import React, { PureComponent } from 'react'
+import './Title.css'
 
 class Title extends PureComponent {
   render() {
-    const { content, style } = this.props
-    const defaultStyles = {
-      borderBottom: '2px solid red'
-    }
+    const { content, style, className } = this.props
 
     return (
-      <h1 style={{ ...defaultStyles, ...style }}>{ content }</h1>
+      <h1 className={['Title', className].join(' ')} style={{ ...style || {} }}>{ content }</h1>
     )
   }
 }
