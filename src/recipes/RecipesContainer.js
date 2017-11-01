@@ -1,7 +1,9 @@
 // src/recipes/RecipesContainer.js
 import React, { PureComponent } from 'react'
+import { connect } from 'react-redux'
 import Title from '../components/Title'
 import RecipeItem from './RecipeItem'
+import SeedButton from './SeedButton'
 import './RecipesContainer.css'
 
 class RecipesContainer extends PureComponent {
@@ -16,6 +18,7 @@ class RecipesContainer extends PureComponent {
       <div className="RecipesContainer">
         <header>
           <Title content="All Recipes" />
+          <SeedButton />
         </header>
 
         <main>
@@ -26,4 +29,6 @@ class RecipesContainer extends PureComponent {
   }
 }
 
-export default RecipesContainer
+const mapStateToProps = ({ recipes }) => ({ recipes })
+
+export default connect(mapStateToProps)(RecipesContainer)
