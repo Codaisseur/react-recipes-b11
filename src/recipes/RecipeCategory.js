@@ -27,7 +27,7 @@ class RecipeCategory extends PureComponent {
 
     if (vegan) return <span>Vegan</span>
     if (vegetarian) return <span>Vegetarian</span>
-    if (pescatarian) return <span>pescatarian</span>
+    if (pescatarian) return <span>Pescatarian</span>
 
     return null
   }
