@@ -1,8 +1,13 @@
-import { SEED_RECIPES, TOGGLE_LIKE_RECIPE } from '../actions/recipes'
+import {
+  SEED_RECIPES,
+  TOGGLE_LIKE_RECIPE,
+  FETCHED_RECIPES
+} from '../actions/recipes'
 
 
 export default (currentState = [], { type, payload } = {}) => {
   switch(type) {
+    case  FETCHED_RECIPES:
     case  SEED_RECIPES:
       return [ ...payload ]
 
