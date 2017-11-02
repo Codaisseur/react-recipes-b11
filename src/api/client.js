@@ -125,7 +125,7 @@ export default class ApiClient {
 
   // Create a full URL to our API, including the host and path
   createUrl(path) {
-    return [this.host, path].join('/')
+    return [this.host, path].join('')
   }
 
   getToken() {
